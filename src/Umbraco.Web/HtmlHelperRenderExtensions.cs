@@ -280,7 +280,7 @@ namespace Umbraco.Web
 											   object additionalRouteVals,
 											   object htmlAttributes)
 		{
-			return html.BeginUmbracoForm(action, controllerName, additionalRouteVals, htmlAttributes.ToDictionary<object>());
+			return html.BeginUmbracoForm(action, controllerName, additionalRouteVals, HtmlHelper.AnonymousObjectToHtmlAttributes( htmlAttributes ));
 		}
 
 		/// <summary>
